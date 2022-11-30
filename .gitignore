@@ -7,7 +7,8 @@ __pycache__/
 *.so
 
 #data
-*.csv
+data/*.csv
+data/*.pkl
 
 #mac os
 .DS_Store
