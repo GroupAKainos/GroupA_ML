@@ -1,6 +1,6 @@
-from nltk.tokenize import sent_tokenize
-import pandas as pd
 import numpy as np
+import pandas as pd
+from nltk.tokenize import sent_tokenize
 import pickle
 
 def inference(text_input, vectorizer, model):

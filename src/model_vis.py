@@ -1,11 +1,11 @@
-import plotly.express as px
 import numpy as np
-from wordcloud import WordCloud
 import matplotlib.pyplot as plt
+import plotly.express as px
+from wordcloud import WordCloud
 
 def scatter(df_test, Y_pred):
     df_test['predictions'] = Y_pred.tolist()
-    fig = px.scatter(df_test, x = 'predictions', y = 'avg_score',
+    fig = px.scatter(df_test, x='predictions', y='avg_score',
                     labels={'predictions':'Predicted', 'avg_score':'Ground Truth'},
                     title="Ground truth vs Predicted"
                     )
