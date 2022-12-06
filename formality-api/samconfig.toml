@@ -1,0 +1,12 @@
+version = 0.1
+[default]
+[default.deploy]
+[default.deploy.parameters]
+stack_name = "formality-api"
+s3_bucket = "aws-sam-cli-managed-default-samclisourcebucket-1rz8436y9hm2b"
+s3_prefix = "formality-api"
+region = "eu-west-2"
+confirm_changeset = true
+capabilities = "CAPABILITY_IAM"
+disable_rollback = true
+image_repositories = ["InferenceFunction=991775080983.dkr.ecr.eu-west-2.amazonaws.com/formalityapib6cec844/inferencefunction7c73919drepo"]
