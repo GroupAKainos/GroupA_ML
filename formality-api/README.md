@@ -5,9 +5,6 @@ This project contains source code and supporting files for a serverless applicat
 - app/app.py - Code for the application's Lambda function including the code for ML inferencing.
 - app/Dockerfile - The Dockerfile to build the container image.
 - app/model - A scikit-learn ridge regression model for determining the formality of text handwritten and a count vectorizer model to transform input text into vectors.
-- app/requirements.txt - The pip requirements to be installed during the container build.
-- events - Invocation events that you can use to invoke the function.
-- template.yaml - A template that defines the application's AWS resources.
 
 The application uses several AWS resources, including Lambda functions and an API Gateway API. These resources are defined in the `template.yaml` file in this project.
 
