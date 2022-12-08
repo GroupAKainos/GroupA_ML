@@ -1,4 +1,4 @@
-# formality-api
+# Formality API
 
 This project contains source code and supporting files for a serverless application for determining the formality of text using a Machine Learning model in [scikit-learn](https://scikit-learn.org/). It includes the following files and folders:
 
