@@ -4,7 +4,7 @@ Produce a tool that will determine the formality of a job description and highli
 
 The tool takes as input a paragraph of test and outputs the formality score for each sentence. Positive scores relate to a formal classification and negative scores relate to a informal classification.
 
-## Download
+### Download
 
 To enable the notebooks to run, please download the following .csv files from [here](https://huggingface.co/datasets/osyvokon/pavlick-formality-scores/tree/main) and save them in ./data (Hint: click on the file size):
 - all.csv
