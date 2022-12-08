@@ -1,15 +1,12 @@
 # formality-api
 
-This project contains source code and supporting files for a serverless application for classifying handwritten digits using a Machine Learning model in [scikit-learn](https://scikit-learn.org/). It includes the following files and folders:
+This project contains source code and supporting files for a serverless application for determining the formality of text using a Machine Learning model in [scikit-learn](https://scikit-learn.org/). It includes the following files and folders:
 
 - app/app.py - Code for the application's Lambda function including the code for ML inferencing.
 - app/Dockerfile - The Dockerfile to build the container image.
-- app/model - A simple scikit-learn logistic regression model for classifying handwritten digits trained against the MNIST dataset.
-- app/requirements.txt - The pip requirements to be installed during the container build.
-- events - Invocation events that you can use to invoke the function.
-- template.yaml - A template that defines the application's AWS resources.
+- app/model - A scikit-learn ridge regression model for determining the formality of text handwritten and a count vectorizer model to transform input text into vectors.
 
-The application uses several AWS resources, including Lambda functions and an API Gateway API. These resources are defined in the `template.yaml` file in this project. You can update the template to add AWS resources through the same deployment process that updates your application code.
+The application uses several AWS resources, including Lambda functions and an API Gateway API. These resources are defined in the `template.yaml` file in this project.
 
 ## Deploy the sample application
 
@@ -62,7 +59,7 @@ The SAM CLI can also emulate your application's API. Use the `sam local start-ap
 
 ```bash
 formality-api$ sam local start-api
-formality-api$ curl http://localhost:3000/classify_digit
+formality-api$ curl http://localhost:3000/formality-api
 ```
 
 The SAM CLI reads the application template to determine the API's routes and the functions that they invoke. The `Events` property on each function's definition includes the route and method for each path.
@@ -72,7 +69,7 @@ The SAM CLI reads the application template to determine the API's routes and the
         Inference:
           Type: Api
           Properties:
-            Path: /classify_digit
+            Path: /formality-api
             Method: post
 ```
 
